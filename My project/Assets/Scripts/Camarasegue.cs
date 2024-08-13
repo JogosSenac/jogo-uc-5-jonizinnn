@@ -43,7 +43,7 @@ public class CameraSegue : MonoBehaviour
             transform.position = posInicial;
         }
 
-        if(pX > -3 && pY > -2.5 && pX < 30)
+        if(pX > -6.12 && pY > -0.17 && pX < 90)
         {
             transform.position = new Vector3(pX, pY, -1);
         }

@@ -77,6 +77,11 @@ public class Player : MonoBehaviour
         {
             isJumping = false;
         }
+
+        if(other.gameObject.CompareTag("Morte"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 }
