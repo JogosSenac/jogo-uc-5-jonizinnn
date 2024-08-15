@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigBody;
     public int speed = 5;
     private bool isJumping;
+    public int key;
 
     // Start is called before the first frame update
     void Start()
@@ -73,7 +75,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Ground"))
+        if(other.gameObject.CompareTag(""))
         {
             isJumping = false;
         }
@@ -82,6 +84,13 @@ public class Player : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if(other.gameObject.CompareTag("chave"))
+        {
+            Destroy(other.gameObject);
+            key+=1;
+        }
+        If(other.gameObject.CompareTag("Porta"))
     }
 
 }
