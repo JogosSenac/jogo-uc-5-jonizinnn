@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Morte
+  - chave
+  - porta
+  - Porta
   layers:
   - Default
   - TransparentFX

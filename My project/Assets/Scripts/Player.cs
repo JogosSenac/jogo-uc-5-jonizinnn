@@ -90,7 +90,11 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             key+=1;
         }
-        If(other.gameObject.CompareTag("Porta"))
+        if (other.gameObject.CompareTag("Porta")&& key==3)
+        {
+           Destroy(this.gameObject);
+        }
+        
     }
 
 }
