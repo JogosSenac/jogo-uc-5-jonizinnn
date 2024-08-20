@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss : MonoBehaviour
+public class plataforma2 : MonoBehaviour
 {
-    public float moveSpeed = 3f;
-    public float moveDistance = 5f;
+    public float moveSpeed = 5f;
+    public float moveDistance = 7f;
     private bool moveRight = true;
     private Transform enemyTransform;
     private Vector3 startPos;
