@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
 
 
-        if(Input.GetKeyDown(KeyCode.W) && !isJumping)
+        if(Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
             sprite.flipX = false;
             animPlayer.SetLayerWeight(2, 1);
