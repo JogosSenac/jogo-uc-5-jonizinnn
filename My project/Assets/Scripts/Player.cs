@@ -71,6 +71,11 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(10.0f,1.0f,0);
         }
+        if(other.gameObject.CompareTag("chave"))
+        {
+            Destroy(other.gameObject);
+            key+=1;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -85,11 +90,7 @@ public class Player : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if(other.gameObject.CompareTag("chave"))
-        {
-            Destroy(other.gameObject);
-            key+=1;
-        }
+        
         if (other.gameObject.CompareTag("Porta")&& key==3)
         {
            Destroy(this.gameObject);
