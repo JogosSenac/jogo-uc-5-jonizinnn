@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -88,12 +89,14 @@ public class Player : MonoBehaviour
         if(other.gameObject.CompareTag("Morte"))
         {
             Destroy(this.gameObject);
+            SceneManager.LoadScene("Morte");
         }
 
         
         if (other.gameObject.CompareTag("Porta")&& key==3)
         {
            Destroy(this.gameObject);
+           SceneManager.LoadScene("Vitoria");
         }
         
     }
