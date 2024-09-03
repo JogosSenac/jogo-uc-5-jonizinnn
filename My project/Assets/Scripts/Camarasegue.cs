@@ -16,7 +16,7 @@ public class CameraSegue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        posInicial = transform.position;
+        transform.position = posInicial;
         player = GameObject.FindWithTag("Player");
     }
 
@@ -25,31 +25,31 @@ public class CameraSegue : MonoBehaviour
     {
         if(player != null)
         {
-            /*if(player.transform.position.x >= limiteX1 && player.transform.position.y <= limiteY1 && player.transform.position.x <= limiteX2 && player.transform.position.y >= limiteY2)
+            if(player.transform.position.x >= limiteX1 && player.transform.position.y <= limiteY1 && player.transform.position.x <= limiteX2 && player.transform.position.y >= limiteY2)
             {
-                //transform.position = new Vector3(player.transform.position.x, player.transform.position.y,-3);
+                transform.position = new Vector3(player.transform.position.x, player.transform.position.y,-3);
                 
-            }*/
+            }
             /*else
             {
-                transform.position = new Vector3(pX, pY, -1);
+                transform.position = new Vector3(posInicial.x,posInicial.y, -1);
             }*/
-            pX = player.transform.position.x;
-            pY = player.transform.position.y;
+            //pX = player.transform.position.x;
+            //pY = player.transform.position.y;
         }
         
-        if(pY <= -6)
+        /*if(pY <= -0.71)
         {
             transform.position = posInicial;
         }
 
-        if(pX > -6.12 && pY > -1.0)
+        if(pX > -5.68 && pY > -1)
         {
             transform.position = new Vector3(pX, pY, -1);
         }
         
         
-        if(pX < 110 && pY > -14.0)
+        if(pX < 110 && pY < 50)
         {
             transform.position = new Vector3(pX, pY, -1);
         }
@@ -58,7 +58,7 @@ public class CameraSegue : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player");
             transform.position = posInicial;
-        }
+        }*/
         
     }
 }

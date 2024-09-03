@@ -6,7 +6,7 @@ public class plataforma2 : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float moveDistance = 7f;
-    private bool moveRight = true;
+    private bool moveRight = false;
     private Transform enemyTransform;
     private Vector3 startPos;
 
@@ -21,6 +21,7 @@ public class plataforma2 : MonoBehaviour
         if (moveRight)
         {
             enemyTransform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            transform.localScale = new Vector3(-0.9184f, 0.949f, 1);
             if (enemyTransform.position.x >= startPos.x + moveDistance)
             {
                 moveRight = false;
@@ -29,6 +30,7 @@ public class plataforma2 : MonoBehaviour
         else
         {
             enemyTransform.position += Vector3.left * moveSpeed * Time.deltaTime;
+            transform.localScale = new Vector3(0.9184f, 0.949f, 1);
             if (enemyTransform.position.x <= startPos.x - moveDistance)
             {
                 moveRight = true;
