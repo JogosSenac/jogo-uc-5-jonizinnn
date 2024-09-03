@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class plataforma2 : MonoBehaviour
+
+
 {
-    public float moveSpeed = 5f;
-    public float moveDistance = 7f;
-    private bool moveRight = false;
+    public float moveSpeed = 3f;
+    public float moveDistance = 5f;
+    private bool moveRight = true;
     private Transform enemyTransform;
     private Vector3 startPos;
 
@@ -21,7 +23,6 @@ public class plataforma2 : MonoBehaviour
         if (moveRight)
         {
             enemyTransform.position += Vector3.right * moveSpeed * Time.deltaTime;
-            transform.localScale = new Vector3(-0.9184f, 0.949f, 1);
             if (enemyTransform.position.x >= startPos.x + moveDistance)
             {
                 moveRight = false;
@@ -30,7 +31,6 @@ public class plataforma2 : MonoBehaviour
         else
         {
             enemyTransform.position += Vector3.left * moveSpeed * Time.deltaTime;
-            transform.localScale = new Vector3(0.9184f, 0.949f, 1);
             if (enemyTransform.position.x <= startPos.x - moveDistance)
             {
                 moveRight = true;
@@ -38,5 +38,4 @@ public class plataforma2 : MonoBehaviour
         }
     }
 }
-
 
